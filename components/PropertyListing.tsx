@@ -137,8 +137,8 @@ const PropertyListing: React.FC<PropertyListingProps> = ({ onReqLogin }) => {
         />
 
         {/* Hero Content */}
-        <div className="absolute inset-0 flex flex-col md:flex-row items-center justify-between px-6 md:px-12 py-8">
-          <div className="max-w-xl animate-in slide-in-from-bottom duration-700 text-center md:text-start mb-8 md:mb-0">
+        <div className="absolute inset-0 flex flex-col justify-center px-6 md:px-12 py-8 pointer-events-none">
+          <div className="max-w-xl animate-in slide-in-from-bottom duration-700 text-center md:text-start mb-8 md:mb-0 pointer-events-auto">
             <div className="flex items-center justify-center md:justify-start gap-2 mb-3">
               <span className="bg-brand-mauve/20 border border-brand-mauve text-brand-beige px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest backdrop-blur-sm">
                 Vision 2030
@@ -158,14 +158,14 @@ const PropertyListing: React.FC<PropertyListingProps> = ({ onReqLogin }) => {
               <ArrowRight className={`w-4 h-4 ${dir === 'rtl' ? 'rotate-180' : ''}`} />
             </button>
           </div>
-
-          {/* Date & Location Widget */}
-          <div className="animate-in slide-in-from-top duration-1000 delay-200">
-            <LocationDateCard
-              onSearch={(city, date) => console.log('Searching', city, date)}
-            />
-          </div>
         </div>
+      </div>
+
+      {/* Floating Date & Location Widget (Overlaps Hero) */}
+      <div className="relative -mt-20 md:-mt-24 px-6 md:px-12 z-20 flex justify-center md:justify-end animate-in slide-in-from-bottom duration-1000">
+        <LocationDateCard
+          onSearch={(city, date) => console.log('Searching', city, date)}
+        />
       </div>
 
       <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-brand-beige/20 pb-4">
