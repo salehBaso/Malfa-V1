@@ -4,8 +4,24 @@ import { MapPin, Calendar as CalendarIcon, ChevronDown } from 'lucide-react';
 export const CITIES = [
     { id: 'riyadh', ar: 'الرياض', en: 'Riyadh', regionAr: 'منطقة الرياض', regionEn: 'Riyadh Region' },
     { id: 'jeddah', ar: 'جدة', en: 'Jeddah', regionAr: 'منطقة مكة المكرمة', regionEn: 'Makkah Region' },
+    { id: 'makkah', ar: 'مكة المكرمة', en: 'Makkah', regionAr: 'منطقة مكة المكرمة', regionEn: 'Makkah Region' },
+    { id: 'madinah', ar: 'المدينة المنورة', en: 'Madinah', regionAr: 'منطقة المدينة المنورة', regionEn: 'Madinah Region' },
     { id: 'dammam', ar: 'الدمام', en: 'Dammam', regionAr: 'المنطقة الشرقية', regionEn: 'Eastern Province' },
+    { id: 'dhahran', ar: 'الظهران', en: 'Dhahran', regionAr: 'المنطقة الشرقية', regionEn: 'Eastern Province' },
+    { id: 'khobar', ar: 'الخبر', en: 'Al Khobar', regionAr: 'المنطقة الشرقية', regionEn: 'Eastern Province' },
     { id: 'abha', ar: 'أبها', en: 'Abha', regionAr: 'منطقة عسير', regionEn: 'Asir Region' },
+    { id: 'tabuk', ar: 'تبوك', en: 'Tabuk', regionAr: 'منطقة تبوك', regionEn: 'Tabuk Region' },
+    { id: 'hail', ar: 'حائل', en: 'Hail', regionAr: 'منطقة حائل', regionEn: 'Hail Region' },
+    { id: 'jizan', ar: 'جازان', en: 'Jizan', regionAr: 'منطقة جازان', regionEn: 'Jizan Region' },
+    { id: 'najran', ar: 'نجران', en: 'Najran', regionAr: 'منطقة نجران', regionEn: 'Najran Region' },
+    { id: 'baha', ar: 'الباحة', en: 'Al Baha', regionAr: 'منطقة الباحة', regionEn: 'Al Baha Region' },
+    { id: 'arar', ar: 'عرعر', en: 'Arar', regionAr: 'الحدود الشمالية', regionEn: 'Northern Borders' },
+    { id: 'sakaka', ar: 'سكاكا', en: 'Sakaka', regionAr: 'منطقة الجوف', regionEn: 'Al Jouf Region' },
+    { id: 'qassim', ar: 'بريدة', en: 'Buraydah', regionAr: 'منطقة القصيم', regionEn: 'Al Qassim Region' },
+    { id: 'unaizah', ar: 'عنيزة', en: 'Unaizah', regionAr: 'منطقة القصيم', regionEn: 'Al Qassim Region' },
+    { id: 'taif', ar: 'الطائف', en: 'Taif', regionAr: 'منطقة مكة المكرمة', regionEn: 'Makkah Region' },
+    { id: 'yanbu', ar: 'ينبع', en: 'Yanbu', regionAr: 'منطقة المدينة المنورة', regionEn: 'Madinah Region' },
+    { id: 'jubail', ar: 'الجبيل', en: 'Al Jubail', regionAr: 'المنطقة الشرقية', regionEn: 'Eastern Province' },
 ];
 
 interface LocationDateCardProps {
