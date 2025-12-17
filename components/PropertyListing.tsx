@@ -137,35 +137,26 @@ const PropertyListing: React.FC<PropertyListingProps> = ({ onReqLogin }) => {
         />
 
         {/* Hero Content */}
-        <div className="absolute inset-0 flex flex-col justify-center px-6 md:px-12 py-8 pointer-events-none">
-          <div className="max-w-xl animate-in slide-in-from-bottom duration-700 text-center md:text-start mb-8 md:mb-0 pointer-events-auto">
-            <div className="flex items-center justify-center md:justify-start gap-2 mb-3">
-              <span className="bg-brand-mauve/20 border border-brand-mauve text-brand-beige px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest backdrop-blur-sm">
-                Vision 2030
-              </span>
-              <span className="bg-white/10 border border-white/20 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest backdrop-blur-sm">
-                Malfa & Maskn
-              </span>
-            </div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
-              {t('heroTitle')}
-            </h1>
-            <p className="text-base md:text-lg text-brand-beige/90 mb-6 max-w-lg leading-relaxed mx-auto md:mx-0">
-              {t('heroSubtitle')}
-            </p>
-            <button className="hidden md:flex bg-white/10 hover:bg-white/20 text-white border border-white/30 backdrop-blur-md px-6 py-3 rounded-lg font-medium transition-all items-center gap-2 w-fit">
-              {t('exploreVision')}
-              <ArrowRight className={`w-4 h-4 ${dir === 'rtl' ? 'rotate-180' : ''}`} />
-            </button>
+        <div className="absolute inset-0 flex flex-col items-center justify-center px-4 z-10">
+          <div className="flex items-center gap-2 mb-6 animate-in slide-in-from-top duration-700">
+            <span className="bg-brand-mauve/20 border border-brand-mauve text-brand-beige px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest backdrop-blur-sm">
+              Vision 2030
+            </span>
+            <span className="bg-white/10 border border-white/20 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest backdrop-blur-sm">
+              Malfa & Maskn
+            </span>
+          </div>
+
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-8 text-center leading-tight max-w-4xl animate-in slide-in-from-bottom duration-700 delay-100">
+            {t('heroTitle')}
+          </h1>
+
+          <div className="animate-in zoom-in duration-500 delay-200">
+            <LocationDateCard
+              onSearch={(city, date) => console.log('Searching', city, date)}
+            />
           </div>
         </div>
-      </div>
-
-      {/* Floating Date & Location Widget (Overlaps Hero) */}
-      <div className="relative -mt-20 md:-mt-24 px-6 md:px-12 z-20 flex justify-center md:justify-end animate-in slide-in-from-bottom duration-1000">
-        <LocationDateCard
-          onSearch={(city, date) => console.log('Searching', city, date)}
-        />
       </div>
 
       <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-brand-beige/20 pb-4">
